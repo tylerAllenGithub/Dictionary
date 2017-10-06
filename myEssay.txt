@@ -1,0 +1,10 @@
+Concrrent approaches to enhancing concurrency in database systems have been focused on developing new transaction models that typically demand changes to either the atomicity consistency or isolation properties of the transactions themeselves Indeed much of this work has been successful but most of these attempts suffer from being either computationally infeasible or requiring the transaction designer be sufficiently knowledgeable to determine a priori how the application semantics must interface with the transaction model
+
+Our approach exploits an object-oriented world but is diferent than these others in that the transaction designer is not expected to have intimate application knowledge this load is placed on the transaction system wich must be able to determine by static analyziz how to maintain database consistency This paper describes an overall architectural model to facilitate multiversion objects that are explicitly designed to enhanc concurrency Within the context of concurrency the key aspects addressed by this paper are as follows
+
+First A transactian model is introduced to show how transactions are managed in our multiversion environment
+
+Second A new correctness criterion is described that emits more histories than conflict serializability and is computationally tractable
+
+Third an architectural model is developed to support multiversioning that provides the well-known ACID transaction properties These build a framework for the implementation of an optimistic concurrency control algorithm Further they exploit relatted issues required to generate reconciliation procedures which have an important role for providing a reliable system
+
